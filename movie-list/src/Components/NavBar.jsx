@@ -1,6 +1,5 @@
-import React from "react";
+
 import tv from "./Images/tv.png";
-import icon from "./Images/Icon (1).png";
 import icon1 from "./Images/Icon.png";
 
 export default function NavBar() {

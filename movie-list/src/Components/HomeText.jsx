@@ -1,4 +1,4 @@
-import React from "react";
+
 import imd from "./Images/MV5BMTk3ODA4Mjc0NF5BMl5BcG5nXkFtZTgwNDc1MzQ2OTE@ 1.png";
 import play from "./Images/Play.png";
 import orange from "./Images/PngItem_1381056 1.png";

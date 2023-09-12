@@ -1,4 +1,4 @@
-import React from "react";
+
 import Poster from "./Images/Poster.png";
 import NavBar from "./NavBar";
 import HomeText from "./HomeText";
