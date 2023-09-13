@@ -1,21 +1,31 @@
-import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Footer from "./Components/Footer";
 import Header from "./Components/Header";
 import MovieBox from "./Components/MovieBox";
 import MovieGrid from "./Components/MovieGrid";
 
-function App() {
+const Home = () => {
   return (
-    <div>
+    <>
+      {" "}
       <Header />
       <MovieGrid />
       <Footer />
+    </>
+  );
+};
+
+function App() {
+  return (
+    <div>
       <BrowserRouter>
         <Routes>
-         <Route path='/movies/:id'  element= {<MovieBox />}/>
-          </Routes>
-        </BrowserRouter>
+          <Route path="/" element={<Home />} />
+
+          <Route path="/movies/:id" element={<MovieBox />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
