@@ -16,7 +16,7 @@ export default function NavBar() {
 
         <div className=" flex items-center relative">
           <input
-            className="h-8 bg-transparent px-4 py-2 rounded-xl border-2 w-[32.8125rem]"
+            className="h-8 bg-transparent px-4 py-2 rounded-xl border-2 lg:w-[30rem] md:w-[20rem] sm:w-[8rem]"
             placeholder="What do you want to watch?"
             type="text"
           />

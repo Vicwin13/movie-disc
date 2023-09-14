@@ -5,9 +5,9 @@ import orange from "./Images/PngItem_1381056 1.png";
 
 export default function HomeText() {
   return (
-    <aside className="text-white max-w-sm  relative left-24">
-      <h1 className="text-5xl font-bold pb-4 ">John Wick 3: Parabellum</h1>
-      <div className="flex items-center gap-24 pb-4">
+    <aside className="text-white max-w-sm md:max-w-xs relative left-24">
+      <h1 className="lg:text-5xl md:text-4xl font-bold  pb-2 lg:pb-4 ">John Wick 3: Parabellum</h1>
+      <div className="flex items-center gap-24 pb-2 lg:pb-4">
         <div className="flex items-center gap-2 ">
           <img className="h-fit" src={imd} alt="" />
           <p>86.0/100</p>

@@ -18,7 +18,8 @@ export default function Footer() {
           <p>Privacy & Policy</p>
           <p>Press Room</p>
         </div>
-        <p className='text-center'> c 2021 MovieBox by Adriana Eka Prayudha</p>
+        <p className='text-center'> &copy;
+ 2021 MovieBox by Adriana Eka Prayudha</p>
 
 
       </footer>
