@@ -1,6 +1,36 @@
-# React + Vite
+# Title
+Movie Discovery 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
+A simple minimalistic movie discovery web application that allows users to search for movies, view details about them.
+
+### Instructions to get the project
+
+- clone link to your laptop from github
+- change directory to movie-list
+- install node package modules using
+```
+npm install
+```
+- then open the project on the browser with
+```
+npm run dev
+```
+- you are good to go.
+
+## Features
+- Top movies being gotten from the api of the [site](https://www.themoviedb.org/settings/api)
+- Click on any box to movie to get the details
+- Error message displays on failed fetch
+
+### features not implemented yet
+
+As of the time this README file was written,
+- The search feature hasn't been implemented
+- The trailer video hasn't been implemented.
+
+
+
 
 Currently, two official plugins are available:
 
