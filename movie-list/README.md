@@ -22,12 +22,13 @@ npm run dev
 - Top movies being gotten from the api of the [site](https://www.themoviedb.org/settings/api)
 - Click on any box to movie to get the details
 - Error message displays on failed fetch
+- The search feature was implemented
 
 ### features not implemented yet
 
 As of the time this README file was written,
-- The search feature hasn't been implemented
-- The trailer video hasn't been implemented.
+
+- The trailer video wasn't been implemented.
 
 
 

@@ -1,9 +1,8 @@
-import React from "react";
 import rectangle from "./Images/Rectangle 1.png";
 
 export default function SideNumbers() {
   return (
-    <>
+    <div className="">
       <aside className="text-white flex items-center gap-2 absolute inset-y-0 right-24">
         <img className="h-fit " src={rectangle} alt="" />
         <div>
@@ -14,6 +13,6 @@ export default function SideNumbers() {
           <div className="text-sm">5</div>
         </div>
       </aside>
-    </>
+    </div>
   );
 }
