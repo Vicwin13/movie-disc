@@ -13,7 +13,7 @@ export default function MovieContent() {
     const currentDate = content?.release_date;
     const newDate = new Date(currentDate || null);
     const utcDate = newDate.toISOString();
-    return utcDate.split("T")[0];
+    return utcDate;
   };
 
   const runTimeMinutes = (content) => {
@@ -81,7 +81,7 @@ export default function MovieContent() {
             <div className="flex gap-4 font-bold text-xs  ">
               {content?.genres?.map((genre) => (
                 <p
-                  className="bg-red-500 py-1 px-2 rounded-xl text-white"
+                  className="bg-red-200 py-1 px-2 rounded-xl text-red font-bold"
                   key={genre.id}
                 >
                   {genre.name}
@@ -98,12 +98,10 @@ export default function MovieContent() {
             </section>
             <aside>
               <div className=" p-2 text-center rounded-full px-4 bg-red-400">
-                {" "}
                 See Show times
               </div>
               <div className=" p-2 text-center rounded-full px-4 mt-2 bg-green-400">
-                {" "}
-                More watch options{" "}
+                More watch options
               </div>
             </aside>
           </div>

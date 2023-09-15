@@ -2,7 +2,7 @@ import rectangle from "./Images/Rectangle 1.png";
 
 export default function SideNumbers() {
   return (
-    <div className="">
+    <div className="hidden md:block">
       <aside className="text-white flex items-center gap-2 absolute inset-y-0 right-24">
         <img className="h-fit " src={rectangle} alt="" />
         <div>

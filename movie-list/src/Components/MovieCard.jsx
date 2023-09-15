@@ -4,6 +4,7 @@ import favorite from "./Images/favourite.png";
 import { useState } from "react";
 // import orange from "./Images/PngItem_1381056 1.png";
 
+// eslint-disable-next-line react/prop-types
 export default function MovieCard({ cards }) {
   const [favColor, setFavColor] = useState("");
 
@@ -11,6 +12,7 @@ export default function MovieCard({ cards }) {
     setFavColor("red");
   };
 
+  // eslint-disable-next-line react/prop-types
   const top10 = cards.slice(0, 10);
 
   return (
@@ -25,11 +27,11 @@ export default function MovieCard({ cards }) {
         {top10.map((card, index) => (
           <Link key={index} to={`/movies/${card.id}`}>
             <div
-              className="h-[20rem] place-items-center"
+              className="h-[20rem] relative place-items-center"
               data-testid="movie-card"
             >
               <div
-                data-testid="movie-poster "
+                data-testid="movie-poster"
                 className=" 
              h-auto bg-no-repeat bg-cover bg-center "
                 style={{
@@ -38,16 +40,18 @@ export default function MovieCard({ cards }) {
                   backgroundImage: `url('https://image.tmdb.org/t/p/original/${card.poster_path}')`,
                 }}
               >
-                <div className=" relative">
-                  <div
-                    className=" w-6 h-6 flex justify-center items-center rounded-full bg-gray-400 absolute inset-y-0 right-0 top-4 hover z-40 hover:bg-red-300"
-                    onClick={changeColor}
-                    style={{ marginRight: "2rem", favColor }}
-                  >
-                    <img className="h-fit" src={favorite} alt="" />
-                  </div>
+                
+              </div>
+              <div className=" absolute inset-y-0 right-0 top-4">
+                <div
+                  className=" w-6 h-6 flex justify-center items-center rounded-full bg-gray-400   hover z-40 hover:bg-red-300"
+                  onClick={changeColor}
+                  style={{ marginRight: "2rem", favColor }}
+                >
+                  <img className="h-fit" src={favorite} alt="" />
                 </div>
               </div>
+
               <p data-testid="movie-title" className="font-bold">
                 {card.original_title}
               </p>

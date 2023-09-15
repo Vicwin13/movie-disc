@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 export default function NavBar() {
   const [query, setQuery] = useState("");
   const [results, setResults] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     fetch(
@@ -20,18 +21,20 @@ export default function NavBar() {
         const searchResults = data.results;
         setResults(searchResults);
         console.log(searchResults);
+        setLoading(false);
       })
       .catch((error) => {
         console.log(error);
+        setLoading(false);
       });
   }, [query]);
 
   return (
     <>
-      <nav className="z-50 flex content-center pt-4 justify-around">
-        <div className="flex items-center">
+      <nav className="z-50 flex content-center pt-4 justify-around relative">
+        <div className="flex items-center ">
           <img src={tv} alt="" />
-          <p className="text-white pl-4">MovieBox</p>
+          <p className="text-white pl-0 sm:pl-4">MovieBox</p>
         </div>
 
         {/* This is the input field
@@ -39,7 +42,7 @@ export default function NavBar() {
 
         <div className=" flex items-center relative">
           <input
-            className="h-8 bg-transparent text-white px-4 py-2 rounded-xl border-2 lg:w-[30rem] md:w-[20rem] sm:w-[8rem]"
+            className="h-8 bg-transparent text-white px-4 py-2 rounded-xl border-2 lg:w-[30rem] md:w-[20rem] sm:w-[15rem]"
             placeholder="What do you want to watch?"
             type="text"
             value={query}
@@ -61,18 +64,30 @@ export default function NavBar() {
               stroke-linejoin="round"
             />
           </svg>
-
-          <div className="w-full top-12 h-auto none bg-white absolute text-black">
-            {results.map((result, index) => (
-              <p className="border border-black-200 z-40" key={index}>
-                {result.original_title}
-              </p>
-            ))}
-          </div>
+        </div>
+        <div className="w-[70%] grid md:grid-cols-3 sm:grid-cols-2   top-20 h-[29rem] overflow-hidden text-white absolute ">
+          {loading && <div className="text-white font-bold"> Loading...</div>}
+          {results.map((result, index) => (
+            <div className="z-40 hover:scale-105 duration-150" key={index}>
+              <div className=" ">
+                <div
+                  data-testid="movie-poster"
+                  className="h-[10rem] bg-cover  bg-no-repeat bg-center"
+                  style={{
+                    backgroundImage: `url('https://image.tmdb.org/t/p/original/${result.poster_path}')`,
+                  }}
+                ></div>
+                <div className="font-bold text-lg">
+                  <p data-testid="movie-title">{result.original_title}</p>
+                  <p data-testid="movie-release-date">{result.release_date}</p>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
 
         <div className="flex items-center">
-          <p className="text-white pr-4">Sign in</p>
+          <p className="text-white pr-0 md:pr-4">Sign in</p>
           <div className="bg-red-400 flex p-2 w-10 items-center justify-center h-10 rounded-full">
             <img className="" src={icon1} alt="" />
           </div>

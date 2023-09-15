@@ -6,11 +6,10 @@ export default function MovieGrid() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const data =
-    "https://api.themoviedb.org/3/movie/top_rated?api_key=141138a81563444c4d2f5e960b5a13ae";
+ 
 
   useEffect(() => {
-    fetch(data)
+    fetch(  "https://api.themoviedb.org/3/movie/top_rated?api_key=141138a81563444c4d2f5e960b5a13ae")
       .then((response) => {
         if (!response.ok) {
           throw Error("Could not fetch data");

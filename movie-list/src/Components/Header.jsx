@@ -7,7 +7,7 @@ export default function Header() {
   return (
     <div>
       <div
-        className="h-screen  bg-no-repeat bg-cover bg-center"
+        className="h-[30rem] md:h-screen  bg-no-repeat bg-cover bg-center"
         style={{ backgroundImage: `url(${Poster})` }}
       >
         <NavBar />
